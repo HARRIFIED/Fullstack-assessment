@@ -1,0 +1,14 @@
+.search-results-page {
+  padding: 16px;
+  margin-left: 270px; // To account for the fixed sidebar width
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}

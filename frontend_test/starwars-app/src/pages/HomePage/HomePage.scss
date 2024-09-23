@@ -1,0 +1,40 @@
+.home-page {
+  padding: 16px;
+  margin-left: 270px; // To account for the fixed sidebar width
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .character-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    button {
+      padding: 8px 16px;
+      margin: 0 8px;
+      border: none;
+      background-color: #61dafb;
+      color: #000;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}

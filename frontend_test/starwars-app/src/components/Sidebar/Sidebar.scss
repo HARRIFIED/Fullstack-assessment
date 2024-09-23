@@ -1,0 +1,48 @@
+.sidebar {
+  position: fixed;
+  top: 60px; // Header height
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px); // Full height minus header
+  padding: 16px;
+  background-color: #282c34;
+  color: #fff;
+  overflow-y: auto;
+
+
+  h2 {
+    margin-top: 20px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+
+      a {
+        color: #61dafb;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .remove-btn {
+        background: none;
+        border: none;
+        color: #ff6b6b;
+        cursor: pointer;
+
+        &:hover {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,6 @@ This system will provide a Node.js API for managing user accounts and financial 
 The system will use a RESTful API architecture with the following components:
 
 - Node.js with Express.js for the API server
-- KnexJS as the ORM for database operations
 - MongoDB as the database
 - Jest for unit and integration testing
 - Flutterwave API for account funding

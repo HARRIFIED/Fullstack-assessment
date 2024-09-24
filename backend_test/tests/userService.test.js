@@ -101,21 +101,6 @@ describe('UserService', () => {
             expect(mockRepository.CreateUser).not.toHaveBeenCalled();
         });
 
-        // it('should handle APIError if CreateUser fails', async () => {
-        //     mockRepository.FindUser.mockResolvedValue(null);
-        //     mockRepository.CreateUser.mockRejectedValue(new Error('Database error'));
-        //     GenerateSalt.mockResolvedValue('salt');
-        //     GeneratePassword.mockResolvedValue('hashedPassword');
-        //
-        //     const result = await userService.SignUp(userInputs);
-        //
-        //     expect(result).toEqual({
-        //         message: 'Data Not found',
-        //         statusCode: expect.any(Number),
-        //         description: expect.any(String),
-        //     });
-        //     expect(APIError).toHaveBeenCalledWith('Data Not found', expect.any(Error));
-        // });
     });
 
     describe('SignIn', () => {
@@ -174,18 +159,5 @@ describe('UserService', () => {
             expect(mockRepository.FindUser).toHaveBeenCalledWith({ email: userInputs.email });
             expect(result).toBeNull();
         });
-
-        // it('should handle APIError if FindUser fails', async () => {
-        //     mockRepository.FindUser.mockRejectedValue(new Error('Database error'));
-        //
-        //     const result = await userService.SignIn(userInputs);
-        //
-        //     expect(result).toEqual({
-        //         message: 'Data Not found',
-        //         statusCode: expect.any(Number),
-        //         description: expect.any(String),
-        //     });
-        //     expect(APIError).toHaveBeenCalledWith('Data Not found', expect.any(Error));
-        // });
     });
 });

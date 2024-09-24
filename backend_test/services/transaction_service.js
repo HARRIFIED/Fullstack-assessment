@@ -100,7 +100,7 @@ class TransactionService {
                 })
             }
 
-            await this.repository.UpdateUserBalance({userId, amount: -amount});
+            const userBal = await this.repository.UpdateUserBalance({userId, amount: -amount});
 
             const record = await this.repository.CreateRecord({
                 userId,
@@ -113,7 +113,7 @@ class TransactionService {
                 message: 'Withdrawal Successful',
                 data: {
                     ...record?._doc,
-                    balance: user?.balance,
+                    balance: userBal?.balance,
                 }
             })
         } catch (err) {
